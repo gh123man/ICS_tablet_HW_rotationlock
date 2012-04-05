@@ -18,7 +18,7 @@
  */
 
 package com.android.server;
-
+doc
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.ContentResolver;
@@ -77,7 +77,7 @@ class RotationSwitchObserver extends UEventObserver {
     @Override
     public void onUEvent(UEventObserver.UEvent event) {
         if (Log.isLoggable(TAG, Log.VERBOSE)) {
-            Slog.v(TAG, "Dock UEVENT: " + event.toString());
+            Slog.v(TAG, "Switch UEVENT: " + event.toString());
         }
 
         synchronized (this) {
@@ -113,11 +113,6 @@ class RotationSwitchObserver extends UEventObserver {
 
     void systemReady() {
         synchronized (this) {
-/*
-            if (mLockState != Intent.EXTRA_DOCK_STATE_UNDOCKED) {
-                update();
-            }
-*/
             mSystemReady = true;
         }
     }
