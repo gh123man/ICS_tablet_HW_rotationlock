@@ -18,7 +18,6 @@
  */
 
 package com.android.server;
-doc
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.ContentResolver;
@@ -129,10 +128,10 @@ class RotationSwitchObserver extends UEventObserver {
                     synchronized (this) {
 			if(mLockState == 0){
 				setAutoRotation(true);
-		    		Toast.makeText(mContext, "Auto-Rotate Unlocked", Toast.LENGTH_SHORT).show();
+		    		Toast.makeText(mContext, mContext.getString(com.android.internal.R.string.rotunlocked), Toast.LENGTH_SHORT).show();
 			} else {
 				setAutoRotation(false);
-				Toast.makeText(mContext, "Auto-Rotate Locked", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, mContext.getString(com.android.internal.R.string.rotlocked), Toast.LENGTH_SHORT).show();
 			}
                     break;
 		}
