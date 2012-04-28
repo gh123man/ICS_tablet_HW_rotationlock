@@ -72,7 +72,7 @@ public class SettingsView extends LinearLayout implements View.OnClickListener {
         mWifi = new WifiController(context,
 				(CompoundButton)findViewById(R.id.wifi_checkbox));
 	boolean hasRotationLock = context.getResources().
-                getBoolean(R.bool.config_hasRotaionLockSwitch);
+                getBoolean(com.android.internal.R.bool.config_hasRotaionLockSwitch);
 	if (!hasRotationLock) {
         	mRotate = new AutoRotateController(context,
         		(CompoundButton)findViewById(R.id.rotate_checkbox));
