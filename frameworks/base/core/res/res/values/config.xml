@@ -791,7 +791,6 @@
     <bool name="config_hasDockBattery">false</bool>
 
     <!-- Device has a h/w rotation lock switch -->
-    <bool name="config_hasRotaionLockSwitch" product="default">false</bool>
-    <bool name="config_hasRotaionLockSwitch" product="hasrotationlock">true</bool>
+    <bool name="config_hasRotaionLockSwitch">false</bool>
 
 </resources>
